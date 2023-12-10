@@ -1,0 +1,6 @@
+.env
+README.md
+docker-compose.yaml
+target/
+dist/
+sth-docker

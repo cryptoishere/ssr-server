@@ -1,0 +1,37 @@
+[workspace]
+
+members = [ "kernel", "server_router", "system_types",
+    "ui", "ui-server", "virtual_dom",
+]
+
+resolver = "2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = "z"
+
+[profile.bench]
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = 3
+
+[profile.dev]         # Modify profile settings via config.
+# inherits = "dev"         # Inherits settings from [profile.dev].
+opt-level = 0            # Optimization level.
+debug = true             # Include debug info.
+split-debuginfo = '...'  # Debug info splitting behavior.
+debug-assertions = true  # Enables debug assertions.
+overflow-checks = true   # Enables runtime integer overflow checks.
+lto = false              # Sets link-time optimization.
+panic = 'unwind'         # The panic strategy.
+incremental = true       # Incremental compilation.
+codegen-units = 16       # Number of code generation units.
+rpath = false            # Sets the rpath linking option.
+strip = "none"           # Removes symbols or debuginfo.
+# [profile.<name>.build-override]  # Overrides build-script settings.
+# # Same keys for a normal profile.
+# [profile.<name>.package.<name>]  # Override profile for a package.
+# # Same keys for a normal profile (minus `panic`, `lto`, and `rpath`).
