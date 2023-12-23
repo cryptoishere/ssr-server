@@ -1,6 +1,15 @@
 .env
+.vscode
 README.md
+README.md_bak
 docker-compose.yaml
 target/
 dist/
 sth-docker
+
+kernel/*
+server_router/*
+system_types/*
+ui-server/*
+ui/*
+virtual_dom/*
