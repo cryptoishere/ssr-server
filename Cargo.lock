@@ -1143,9 +1143,11 @@ dependencies = [
 name = "kernel"
 version = "0.1.0"
 dependencies = [
+ "bytes",
  "futures",
  "lazy_static",
  "log",
+ "reqwest",
  "serde",
  "serde_json",
  "system_types",
@@ -2355,7 +2357,6 @@ dependencies = [
  "rand",
  "reqwest",
  "serde",
- "serde_json",
  "system_types",
  "uuid",
  "wasm-bindgen",
